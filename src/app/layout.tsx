@@ -67,7 +67,7 @@ export const metadata: Metadata = {
     template: '%s | Laks Luxury Detailing',
   },
   description:
-    'Premium auto detailing services with luxury care for your vehicle. Professional detailing, ceramic coating, paint correction, and more.',
+    'premium mobile detailing services with luxury care for your vehicle. Professional detailing, ceramic coating, paint correction, and more.',
   keywords: [
     'Auto Detailing',
     'Car Detailing',
@@ -99,7 +99,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Laks Luxury Detailing - Premium Auto Detailing Services',
     description:
-      'Premium auto detailing services with luxury care for your vehicle. Professional detailing, ceramic coating, paint correction, and more.',
+      'premium mobile detailing services with luxury care for your vehicle. Professional detailing, ceramic coating, paint correction, and more.',
     siteName: 'Laks Luxury Detailing',
     images: [
       {
@@ -114,7 +114,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Laks Luxury Detailing - Premium Auto Detailing Services',
     description:
-      'Premium auto detailing services with luxury care for your vehicle. Professional detailing, ceramic coating, paint correction, and more.',
+      'premium mobile detailing services with luxury care for your vehicle. Professional detailing, ceramic coating, paint correction, and more.',
     images: ['/og-image.jpg'],
     creator: '@laksluxurydetailing',
   },
