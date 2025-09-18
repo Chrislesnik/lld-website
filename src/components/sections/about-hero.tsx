@@ -29,22 +29,25 @@ export function AboutHero() {
           </h1>
 
           <p className="text-muted-foreground mt-5 font-sans text-2xl font-medium md:text-3xl lg:text-4xl">
-            Laks Luxury Detailing brings your vehicle to life with professional care.
+            Laks Luxury Detailing brings your vehicle to life with professional
+            care.
           </p>
 
           <p className="text-muted-foreground mt-8 hidden max-w-lg space-y-6 text-lg font-medium text-balance md:block lg:mt-12">
             At Laks Luxury Detailing, we are dedicated to transforming the way
             vehicle owners care for their cars. Our mission is to provide our
-            customers with an unbeatable edge over wear, damage, and aging through
-            professional detailing services and premium protection products. We'll
-            stop at nothing to give you the care your vehicle deserves.
+            customers with an unbeatable edge over wear, damage, and aging
+            through professional detailing services and premium protection
+            products. We'll stop at nothing to give you the care your vehicle
+            deserves.
             <br />
             <br />
             We're customer-obsessed — investing the time to understand every
             aspect of your vehicle's needs so that we can help you maintain it
             better than ever before. We're all in this together because your
             vehicle's success is our success. In our history as a company, we've
-            never lost a customer, because when your vehicle looks amazing, so do we.
+            never lost a customer, because when your vehicle looks amazing, so
+            do we.
           </p>
         </div>
 

@@ -1,6 +1,7 @@
 'use client';
 
 import { useState } from 'react';
+
 import Image from 'next/image';
 import Link from 'next/link';
 
@@ -14,18 +15,20 @@ import {
 
 import { DashedLine } from '../dashed-line';
 
-import { Button } from '@/components/ui/button';
 import { BookingModal } from '@/components/ui/booking-modal';
+import { Button } from '@/components/ui/button';
 
 const features = [
   {
     title: 'Ceramic Coating',
-    description: 'Premium ceramic coating for long-lasting protection and shine.',
+    description:
+      'Premium ceramic coating for long-lasting protection and shine.',
     icon: CircleDot,
   },
   {
     title: 'Paint Correction',
-    description: 'Professional paint correction to restore your vehicle\'s finish.',
+    description:
+      "Professional paint correction to restore your vehicle's finish.",
     icon: Blend,
   },
   {
@@ -53,12 +56,14 @@ export default function Hero() {
           </h1>
 
           <p className="text-muted-foreground mt-5 font-sans text-2xl font-medium md:text-3xl lg:text-4xl">
-            Laks Luxury Detailing provides premium auto detailing services
-            with professional care and attention to detail.
+            Laks Luxury Detailing provides premium auto detailing services with
+            professional care and attention to detail.
           </p>
 
           <div className="mt-8 flex flex-wrap items-center gap-4">
-            <Button onClick={() => setIsBookingModalOpen(true)}>Book Service</Button>
+            <Button onClick={() => setIsBookingModalOpen(true)}>
+              Book Service
+            </Button>
             <Link href="#">
               <Button
                 variant="outline"
@@ -112,9 +117,9 @@ export default function Hero() {
       </div>
 
       {/* Booking Modal */}
-      <BookingModal 
-        isOpen={isBookingModalOpen} 
-        onClose={() => setIsBookingModalOpen(false)} 
+      <BookingModal
+        isOpen={isBookingModalOpen}
+        onClose={() => setIsBookingModalOpen(false)}
       />
     </section>
   );

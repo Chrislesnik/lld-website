@@ -1,13 +1,14 @@
 'use client';
 
 import { useState } from 'react';
+
 import Image from 'next/image';
 import Link from 'next/link';
 
 import { ArrowUpRight } from 'lucide-react';
 
-import { Button } from '@/components/ui/button';
 import { BookingModal } from '@/components/ui/booking-modal';
+import { Button } from '@/components/ui/button';
 
 export function Footer() {
   const [isBookingModalOpen, setIsBookingModalOpen] = useState(false);
@@ -40,8 +41,8 @@ export function Footer() {
           location.
         </p>
         <div>
-          <Button 
-            size="lg" 
+          <Button
+            size="lg"
             className="mt-4"
             onClick={() => setIsBookingModalOpen(true)}
           >
@@ -95,9 +96,9 @@ export function Footer() {
       />
 
       {/* Booking Modal */}
-      <BookingModal 
-        isOpen={isBookingModalOpen} 
-        onClose={() => setIsBookingModalOpen(false)} 
+      <BookingModal
+        isOpen={isBookingModalOpen}
+        onClose={() => setIsBookingModalOpen(false)}
       />
     </footer>
   );

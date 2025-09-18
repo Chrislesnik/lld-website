@@ -1,13 +1,13 @@
 'use client';
 
 import { useState } from 'react';
+
 import { X } from 'lucide-react';
 
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
 import { Textarea } from '@/components/ui/textarea';
-import { cn } from '@/lib/utils';
 
 interface BookingModalProps {
   isOpen: boolean;
@@ -25,7 +25,7 @@ export function BookingModal({ isOpen, onClose }: BookingModalProps) {
   });
 
   const handleInputChange = (field: string, value: string) => {
-    setFormData(prev => ({
+    setFormData((prev) => ({
       ...prev,
       [field]: value,
     }));
@@ -34,7 +34,7 @@ export function BookingModal({ isOpen, onClose }: BookingModalProps) {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     // Handle form submission here
-    console.log('Booking request:', formData);
+    // Booking request submitted
     onClose();
   };
 
@@ -43,16 +43,18 @@ export function BookingModal({ isOpen, onClose }: BookingModalProps) {
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center">
       {/* Backdrop */}
-      <div 
+      <div
         className="fixed inset-0 bg-black/50 backdrop-blur-sm"
         onClick={onClose}
       />
-      
+
       {/* Modal */}
-      <div className="relative bg-background border border-border rounded-2xl p-8 w-full max-w-md mx-4 shadow-2xl">
+      <div className="bg-background border-border relative mx-4 w-full max-w-md rounded-2xl border p-8 shadow-2xl">
         {/* Header */}
-        <div className="flex items-center justify-between mb-6">
-          <h2 className="text-2xl font-bold text-foreground">Book Your Detail</h2>
+        <div className="mb-6 flex items-center justify-between">
+          <h2 className="text-foreground text-2xl font-bold">
+            Book Your Detail
+          </h2>
           <button
             onClick={onClose}
             className="text-muted-foreground hover:text-foreground transition-colors"
@@ -64,7 +66,10 @@ export function BookingModal({ isOpen, onClose }: BookingModalProps) {
         {/* Form */}
         <form onSubmit={handleSubmit} className="space-y-4">
           <div>
-            <Label htmlFor="fullName" className="text-sm font-medium text-foreground">
+            <Label
+              htmlFor="fullName"
+              className="text-foreground text-sm font-medium"
+            >
               Full Name
             </Label>
             <Input
@@ -78,7 +83,10 @@ export function BookingModal({ isOpen, onClose }: BookingModalProps) {
           </div>
 
           <div>
-            <Label htmlFor="phoneNumber" className="text-sm font-medium text-foreground">
+            <Label
+              htmlFor="phoneNumber"
+              className="text-foreground text-sm font-medium"
+            >
               Phone Number
             </Label>
             <Input
@@ -92,7 +100,10 @@ export function BookingModal({ isOpen, onClose }: BookingModalProps) {
           </div>
 
           <div>
-            <Label htmlFor="email" className="text-sm font-medium text-foreground">
+            <Label
+              htmlFor="email"
+              className="text-foreground text-sm font-medium"
+            >
               Email Address
             </Label>
             <Input
@@ -106,7 +117,10 @@ export function BookingModal({ isOpen, onClose }: BookingModalProps) {
           </div>
 
           <div>
-            <Label htmlFor="vehicleDetails" className="text-sm font-medium text-foreground">
+            <Label
+              htmlFor="vehicleDetails"
+              className="text-foreground text-sm font-medium"
+            >
               Vehicle Details
             </Label>
             <Input
@@ -114,13 +128,18 @@ export function BookingModal({ isOpen, onClose }: BookingModalProps) {
               type="text"
               placeholder="Year, Make, Model"
               value={formData.vehicleDetails}
-              onChange={(e) => handleInputChange('vehicleDetails', e.target.value)}
+              onChange={(e) =>
+                handleInputChange('vehicleDetails', e.target.value)
+              }
               className="mt-1"
             />
           </div>
 
           <div>
-            <Label htmlFor="serviceLocation" className="text-sm font-medium text-foreground">
+            <Label
+              htmlFor="serviceLocation"
+              className="text-foreground text-sm font-medium"
+            >
               Service Location
             </Label>
             <Input
@@ -128,27 +147,34 @@ export function BookingModal({ isOpen, onClose }: BookingModalProps) {
               type="text"
               placeholder="Your address or preferred location"
               value={formData.serviceLocation}
-              onChange={(e) => handleInputChange('serviceLocation', e.target.value)}
+              onChange={(e) =>
+                handleInputChange('serviceLocation', e.target.value)
+              }
               className="mt-1"
             />
           </div>
 
           <div>
-            <Label htmlFor="additionalNotes" className="text-sm font-medium text-foreground">
+            <Label
+              htmlFor="additionalNotes"
+              className="text-foreground text-sm font-medium"
+            >
               Additional Notes
             </Label>
             <Textarea
               id="additionalNotes"
               placeholder="Any specific requests or details..."
               value={formData.additionalNotes}
-              onChange={(e) => handleInputChange('additionalNotes', e.target.value)}
+              onChange={(e) =>
+                handleInputChange('additionalNotes', e.target.value)
+              }
               className="mt-1 min-h-[80px]"
             />
           </div>
 
           <Button
             type="submit"
-            className="w-full bg-[#76BBF7] hover:bg-[#5BA3F0] text-white font-medium py-3 rounded-lg transition-all duration-200"
+            className="w-full rounded-lg bg-[#76BBF7] py-3 font-medium text-white transition-all duration-200 hover:bg-[#5BA3F0]"
           >
             Submit Booking Request
           </Button>

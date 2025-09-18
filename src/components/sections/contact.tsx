@@ -75,7 +75,8 @@ export default function Contact() {
           Contact us
         </h1>
         <p className="text-muted-foreground mt-4 text-center leading-snug font-medium lg:mx-auto">
-          Ready to give your vehicle the luxury treatment it deserves? Get in touch with us today.
+          Ready to give your vehicle the luxury treatment it deserves? Get in
+          touch with us today.
         </p>
 
         {/* Inquiry Form */}

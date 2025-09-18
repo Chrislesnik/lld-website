@@ -98,7 +98,9 @@ export const Pricing = ({ className }: { className?: string }) => {
                       checked={isAnnual}
                       onCheckedChange={() => setIsAnnual(!isAnnual)}
                     />
-                    <span className="text-sm font-medium">Package deals available</span>
+                    <span className="text-sm font-medium">
+                      Package deals available
+                    </span>
                   </div>
                 ) : (
                   <span className="text-muted-foreground text-sm">
@@ -120,7 +122,9 @@ export const Pricing = ({ className }: { className?: string }) => {
 
                 <Button
                   className="w-fit"
-                  variant={plan.name === 'Premium Detail' ? 'default' : 'outline'}
+                  variant={
+                    plan.name === 'Premium Detail' ? 'default' : 'outline'
+                  }
                 >
                   Book Service
                 </Button>
